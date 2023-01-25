@@ -68,7 +68,7 @@
 
 .tab {
     display: inline-block;
-    width : 24.5%;
+    width: 24.5%;
 }
 
 .chat_bar {
@@ -81,15 +81,58 @@
 .exit_box {
     height: 25px;
     width: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid black;
     margin-top: 5px;
     position: absolute;
     right: 15px;
 }
 
+.chats {
+    padding-top: 30px;
+    padding-bottom: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.chat_window {
+    border-radius: 10px;
+    border: 2px solid black;
+    align-items: center;
+}
+
+.chat_name {
+    padding: 5px 10px 5px 50px;
+    display: inline-block;
+    margin: auto;
+}
+
+.chat_text_box {
+    padding: 8px 900px 8px 8px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px 20px 5px 20px;
+}
+
+.send {
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.refresh {
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: auto
+}
+
 a {
     text-align: center;
     display: block;
 }
-
