@@ -132,6 +132,153 @@
     margin: auto
 }
 
+.edit_window {
+    top: 33%;
+    width: 40%;
+    left: 33%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    align-items: center;
+    position: fixed;
+    
+}
+
+.edit_bar {
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.file_name {
+    padding: 5px 5px 5px 50px;
+    display: inline-block;
+    margin: auto;
+}
+
+.file_text_box {
+    padding: 10px 200px 10px 8px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 20px 20px 5px 20px;
+}
+
+.save {
+    width: 20%;
+    padding: 8px 15px 8px 15px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 50px 20px 30px 190px;
+
+}
+
+.cancel {
+    width: 20%;
+    padding: 8px 15px 8px 15px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.delete_window {
+    top: 33%;
+    width: 30%;
+    left: 33%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    align-items: center;
+    position: fixed;
+    
+}
+
+.delete_bar {
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.image_pos{
+    display: inline-block;
+}
+
+.ok {
+    width: 20%;
+    padding: 8px 15px 8px 15px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 50px 20px 30px 120px;
+
+}
+
+.d_cancel {
+    width: 20%;
+    padding: 8px 15px 8px 15px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.ed_buttons {
+    background: none!important;
+  border: none;
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.upload_window {
+    top: 33%;
+    width: 50%;
+    left: 33%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    align-items: center;
+    position: fixed;
+    
+}
+
+.upload_bar {
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.choose {
+    width: 20%;
+    padding: 8px 15px 8px 15px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 50px 20px 5px 50px;
+}
+
+#delete {
+    display: none;
+}
+
+#edit {
+    display: none;
+}
+
+#upload {
+    display: none;
+}
+
 a {
     text-align: center;
     display: block;
