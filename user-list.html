@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/manage-user.css" />
+    <script src="./js/edit-delete.js"></script>
     <title>Communications application</title>
 </head>
 
 <body>
+    <!-- Top Navigation Buttons -->
     <span class="tab"><a class="tool_box" href="./chat.html">Group Chat</a></span>
-    <span class="tab"><a class="tool_box" style="background-color: white;" href="./user-list.html">Manage Users</a></span>
+    <span class="tab"><a class="tool_box" style="background-color: white;" href="./user-list.html">Manage
+            Users</a></span>
     <span class="tab"><a class="tool_box" href="./documents-list.html">Manage Documents</a></span>
     <span class="tab"><a class="tool_box" href="./logout.html">Logout</a></span>
+    <!-- Users Table -->
     <h1>Users</h1>
     <table>
         <thead>
@@ -39,8 +43,8 @@
                 textuser@gmail.com
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="document.location='edit-user.html'"> Edit </button> | <button
+                    class="ed_buttons" onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
@@ -51,8 +55,8 @@
                 anne.hunter@mail.com
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="document.location='edit-user.html'"> Edit </button> | <button
+                    class="ed_buttons" onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
@@ -63,89 +67,102 @@
                 jale@yahoo.com
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="document.location='edit-user.html'"> Edit </button> | <button
+                    class="ed_buttons" onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
             <td>
-                
+
             </td>
             <td>
-               
+
             </td>
             <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                
-            </td>
-            <td>
-               
-            </td>
-            <td>
-                
+
             </td>
         </tr>
         <tr>
             <td>
-                
+
             </td>
             <td>
-               
+
             </td>
             <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                
-            </td>
-            <td>
-               
-            </td>
-            <td>
-                
+
             </td>
         </tr>
         <tr>
             <td>
-                
+
             </td>
             <td>
-               
+
             </td>
             <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                
-            </td>
-            <td>
-               
-            </td>
-            <td>
-                
+
             </td>
         </tr>
         <tr>
             <td>
-                
+
             </td>
             <td>
-               
+
             </td>
             <td>
-                
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
             </td>
         </tr>
 
     </table>
+    <!-- Delete Window -->
+    <div id="delete">
+        <div class="delete_window">
+            <div class="delete_bar">
+                <div class="exit_box">X</div>
+                <p class="align_centre"><b>Confirm File Deletion</b></p>
+            </div>
+            <div class="image_pos"><img src="./images/question.png" alt=""></div>
+            <div class="file_name"><b>Are you Sure?</b></div>
+            <button onclick="hideDelete()" class="ok">Ok</button>
+            <button onclick="hideDelete()" class="d_cancel">Cancel</button>
+        </div>
+    </div>
 
 </body>
 

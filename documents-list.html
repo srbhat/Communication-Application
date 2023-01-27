@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/manage-user.css" />
+    <script src="./js/edit-delete.js"></script>
     <title>Communications application</title>
 </head>
 
 <body>
+    <!-- Top Navigation Buttons -->
     <span class="tab"><a class="tool_box" href="./chat.html">Group Chat</a></span>
     <span class="tab"><a class="tool_box" href="./user-list.html">Manage Users</a></span>
-    <span class="tab"><a class="tool_box" style="background-color: white;" href="./documents-list.html">Manage Documents</a></span>
+    <span class="tab"><a class="tool_box" style="background-color: white;" href="./documents-list.html">Manage
+            Documents</a></span>
     <span class="tab"><a class="tool_box" href="./logout.html">Logout</a></span>
+    <!-- My Uploads Table -->
     <h1>My Uploads</h1>
     <table>
         <thead>
@@ -39,8 +43,8 @@
                 sales-Sep2014.xls
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="showEdit()"> Edit </button> | <button class="ed_buttons"
+                    onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
@@ -51,8 +55,8 @@
                 SummaryQ4-2014.ppt
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="showEdit()"> Edit </button> | <button class="ed_buttons"
+                    onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
@@ -63,8 +67,8 @@
                 SalesProfitProjection.xls
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                <button class="ed_buttons" onclick="showEdit()"> Edit </button> | <button class="ed_buttons"
+                    onclick="showDelete()"> Delete </button>
             </td>
         </tr>
         <tr>
@@ -79,6 +83,7 @@
             </td>
         </tr>
     </table>
+    <!-- Shared Uploads Table -->
     <h1>Shared Uploads</h1>
     <table>
         <thead>
@@ -103,8 +108,7 @@
                 Sale-Attend-2014.xls
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                anne.hunter@mail.com
             </td>
         </tr>
         <tr>
@@ -115,8 +119,7 @@
                 OfficeRule.doc
             </td>
             <td class="align_centre">
-                <a style="display:inline;" href="./edit-user.html">Edit</a>|<a style="display:inline;"
-                    href="">Delete</a>
+                hr.office@mail.com
             </td>
         </tr>
         <tr>
@@ -130,7 +133,61 @@
 
             </td>
         </tr>
+        <tr>
+            <td>
+                <button onclick="showUpload()" class="submit_box">+ Add Upload</button>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
     </table>
+    <!-- Edit Window -->
+    <div id="edit">
+        <div class="edit_window">
+            <div class="edit_bar">
+                <div class="exit_box">X</div>
+                <p class="align_centre"><b>Edit</b></p>
+            </div>
+            <div class="file_name"><b>File Description</b></div>
+            <div class="file_text_box">Sales Report</div>
+            <button onclick="hideEdit()" class="save">Save</button>
+            <button onclick="hideEdit()" class="cancel">Cancel</button>
+        </div>
+    </div>
+    <!-- Delete Window -->
+    <div id="delete">
+        <div class="delete_window">
+            <div class="delete_bar">
+                <div class="exit_box">X</div>
+                <p class="align_centre"><b>Confirm File Deletion</b></p>
+            </div>
+            <div class="image_pos"><img src="./images/question.png" alt=""></div>
+            <div class="file_name"><b>Are you Sure?</b></div>
+            <button onclick="hideDelete()" class="ok">Ok</button>
+            <button onclick="hideDelete()" class="d_cancel">Cancel</button>
+        </div>
+    </div>
+    <!-- Upload Window -->
+    <div id="upload">
+        <div class="upload_window">
+            <div class="upload_bar">
+                <div class="exit_box">X</div>
+                <p class="align_centre"><b>Upload</b></p>
+            </div>
+            <div class="file_name"><b>File Description</b></div>
+            <div class="file_text_box">Sample File</div>
+            <div class="file_name"><b>File Upload</b></div>
+            <button class="choose">Choose File</button>
+            <div class="file_name"><b>Sample.doc</b></div>
+            <button onclick="hideUpload()" class="save">Upload Now</button>
+            <button onclick="hideUpload()" class="cancel">Cancel</button>
+        </div>
+    </div>
 </body>
 
 </html>
