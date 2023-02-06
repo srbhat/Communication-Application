@@ -7,6 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communications application</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : [];
+        function validate_and_create() {
+
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email_id").value;
+            var password = document.getElementById("pwd").value;
+            var confirm_password = document.getElementById("cnf_pwd").value;
+            // Checking for the user existence
+            for (let user of users) {
+                if (user.email == email) {
+                    alert("User already exists!");
+                    return false;
+                }
+            }
+            if (fullName == "") {
+                alert("Please enter fullname");
+                return false;
+            }
+            else if (email == "") {
+                alert("Please enter email");
+                return false;
+            }
+            else if (password == "") {
+                alert("Please enter password");
+                return false;
+            }
+            else if (confirm_password == "") {
+                alert("Please enter confirm password");
+                return false;
+            }
+            else if (password.length < 8) {
+                alert("Please enter password of more than 8 character");
+                return false;
+            }
+            else if (password != confirm_password) {
+                alert("Passwords Does Not Match!");
+                return false;
+            }
+            else {
+
+                // Writing to local storage
+                let userObj = {
+                    id: Number(new Date()),
+                    fullName: fullName,
+                    email: email,
+                    password: password,
+                    confirm_password: confirm_password
+                }
+                users.push(userObj); // Push item in array
+                let usersString = JSON.stringify(users);
+                localStorage.setItem("users", usersString); // localstorage key and value to set item
+                return true;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -15,30 +71,30 @@
 
         <table>
             <!-- Register Form -->
-            <form action="./register-success.html" method="get">
+            <form action="./register-success.html" method="get" onsubmit="return validate_and_create()">
                 <tr>
                     <td class="table_align">
                         <h3>Full Name</h3>
                     </td>
-                    <td><input class="input_box" type="text" placeholder="Anne Hunter"></td>
+                    <td><input id="fullName" class="input_box" type="text" placeholder="Anne Hunter"></td>
                 </tr>
                 <tr>
                     <td class="table_align">
                         <h3>Email</h3>
                     </td>
-                    <td><input class="input_box" type="email" placeholder="anne.hunter@mail.com"></td>
+                    <td><input id="email_id" class="input_box" type="email" placeholder="anne.hunter@mail.com"></td>
                 </tr>
                 <tr>
                     <td class="table_align">
                         <h3>Password</h3>
                     </td>
-                    <td><input class="input_box input" type="password" placeholder="*****"></td>
+                    <td><input id="pwd" class="input_box input" type="password" placeholder="*****"></td>
                 </tr>
                 <tr>
                     <td class="table_align">
                         <h3>Confirm Password</h3>
                     </td>
-                    <td><input class="input_box" type="password" placeholder="*****"></td>
+                    <td><input id="cnf_pwd" class="input_box" type="password" placeholder="*****"></td>
                 </tr>
                 <tr>
                     <td class="button_align" colspan="2">
