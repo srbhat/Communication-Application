@@ -8,6 +8,7 @@
     <title>Communications application</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/manage-user.css" />
+
 </head>
 
 <body>
@@ -18,7 +19,13 @@
     <span class="tab"><a class="tool_box" href="./logout.html">Logout</a></span>
     <!-- Login Success -->
     <h1 class="align_centre">Login Successful</h1>
-    <p class="align_centre"><b>Welcome!</b> anne.hunter@mail.com</p>
+    <p class="align_centre"><b>Welcome!</b> <span id="welcome"></span> </p>
+    <script>
+        let loggedin = localStorage.getItem("loggedin") ? JSON.parse(localStorage.getItem("loggedin")) : [];
+        let email = loggedin[0].email;
+        let g = "Hi"
+        document.getElementById("welcome").innerHTML = email;
+    </script>
 </body>
 
 </html>

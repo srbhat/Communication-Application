@@ -8,7 +8,7 @@
     <title>Communications application</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script>
-        let loggedin = localStorage.getItem("loggedin") ? JSON.parse(localStorage.getItem("loggedin")) : [];
+        let loggedin = [];
         let users = JSON.parse(localStorage.getItem("users"))
         function validate_and_login() {
 
@@ -39,12 +39,12 @@
                         return true;
                     }
                     else {
-                        alert("Password Incorrect!");
+                        alert("Wrong Email or Password!");
                         return false;
                     }
                 }
             }
-            alert("User doesnt Exists!");
+            alert("Wrong Email or Password!");
             return false;
 
         }
